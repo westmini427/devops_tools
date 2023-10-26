@@ -1,0 +1,5 @@
+#cloud-config
+
+runcmd:
+  - [sh, -c, "curl -fsSL https://get.docker.com -o get-docker.sh"]
+  - [sh, -c, "sh get-docker.sh"]

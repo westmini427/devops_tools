@@ -1,7 +1,8 @@
 ### devops tools
-##### 이것저것 사용해보는중! 코드로 모든 것을 관리해보자~! 이말이야~!
+##### 이것저것 사용해보는중!
 
-- IaC 툴인 terraform으로 AWS EC2 및 EC2 내에 도커 설치 진행해봄!
-- AWS 3 tier Architecture 구축 진행예정!
+1. terraform : AWS EC2, EC2 내에 도커 설치 (완)
+2. terraform : AWS vpc, subnet, igw, alb, security_groups, route_table, ec2, rds, dns 등 기본 Architecture 구축 (완) 
 
-- CI/CD 툴인 jenkins도 쫌쫌따리 사용해볼 예정입니다~!
+- terraform : Naver cloud 등 AWS 이외의 클라우드 환경 구축 예정
+- jenkins : Docker와 함께 환경 구축 후 CI/CD 실습 예정

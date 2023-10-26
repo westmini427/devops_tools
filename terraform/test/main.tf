@@ -24,8 +24,8 @@ data "aws_vpc" "default" {
 }
 
 
-resource "aws_security_group" "hello" {
-  name   = "hello"
+resource "aws_security_group" "helloworld" {
+  name   = "helloworld"
   vpc_id = data.aws_vpc.default.id
 
   ingress {
@@ -43,7 +43,7 @@ resource "aws_security_group" "hello" {
   }
 
   tags = {
-    Name = "hello"
+    Name = "helloworld"
   }
 }
 
@@ -53,12 +53,12 @@ resource "aws_instance" "helloworld" {
   instance_type = "t3.micro"
 
   key_name        = "aws_seo"
-  security_groups = [aws_security_group.hello.name]
+  security_groups = [aws_security_group.helloworld.name]
 
   user_data = file("${path.module}/userdata.yaml")
 
   tags = {
-    Name = "hello"
+    Name = "helloworld"
   }
 }
 

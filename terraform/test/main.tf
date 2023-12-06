@@ -62,3 +62,19 @@ resource "aws_instance" "helloworld" {
   }
 }
 
+
+resource "aws_instance" "helloworld" {
+  ami           = "ami-086cae3329a3f7d75"
+  instance_type = "t3.micro"
+
+  key_name        = "aws_seo"
+  security_groups = [aws_security_group.helloworld.name]
+
+  user_data = file("${path.module}/userdata.yaml")
+
+  tags = {
+    Name = "helloworld"
+  }
+}
+
+
